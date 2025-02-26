@@ -31,19 +31,19 @@ Parquet files will be saved in the `parquet_output` directory on your local file
 
 2. Install the required Python packages:
    ```sh
-   pip install -r requirements.txt
+   pip install -r src/requirements.txt
    ```
 
 3. Run the script:
    ```sh
-   python program.py
+   python src/main.py
    ```
 
 Parquet files will be saved in the `parquet_output` directory.
 
 ## Configuration
 
-You can configure the Git repository URL, clone directory, and output directory by modifying the following variables in `program.py`:
+You can configure the Git repository URL, clone directory, and output directory by modifying the following variables in `src/main.py`:
 
 - `GIT_REPO_URL`: URL of the Git repository to clone
 - `CLONE_DIR`: Directory to clone the repository into

@@ -12,10 +12,10 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r src/requirements.txt
 
 # Run the Python script
-python program.py
+python src/main.py
 
 # Deactivate the virtual environment
 deactivate
