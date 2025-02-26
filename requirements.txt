@@ -1,0 +1,4 @@
+gitpython
+sqlparse
+pandas
+pyarrow

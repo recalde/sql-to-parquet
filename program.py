@@ -6,9 +6,9 @@ import pandas as pd
 import pyarrow.parquet as pq
 from collections import defaultdict
 
-GIT_REPO_URL = "https://github.com/example/repo.git"
-CLONE_DIR = "./repo_clone"
-OUTPUT_DIR = "./parquet_output"
+GIT_REPO_URL = os.getenv("GIT_REPO_URL", "https://github.com/example/repo.git")
+CLONE_DIR = os.getenv("CLONE_DIR", "./repo_clone")
+OUTPUT_DIR = os.getenv("OUTPUT_DIR", "./parquet_output")
 
 # Regex patterns
 CREATE_TABLE_PATTERN = re.compile(r'CREATE TABLE (\w+)\s*\((.*?)\);', re.S)
