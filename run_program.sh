@@ -19,9 +19,3 @@ python program.py
 
 # Deactivate the virtual environment
 deactivate
-
-# Build Docker image
-docker build -t sql-to-parquet .
-
-# Run Docker container with environment variables
-docker run -e GIT_REPO_URL="$GIT_REPO_URL" -e CLONE_DIR="$CLONE_DIR" -e OUTPUT_DIR="$OUTPUT_DIR" sql-to-parquet

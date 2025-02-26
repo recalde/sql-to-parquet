@@ -14,12 +14,12 @@ This program clones a Git repository, scans for `.sql` files, extracts `CREATE T
    docker build -t sql-to-parquet .
    ```
 
-2. Run the container with environment variables:
+2. Run the container with environment variables and mount a local directory for output:
    ```sh
-   docker run -e GIT_REPO_URL="https://github.com/example/repo.git" -e CLONE_DIR="./repo_clone" -e OUTPUT_DIR="./parquet_output" sql-to-parquet
+   docker run -e GIT_REPO_URL="https://github.com/example/repo.git" -e CLONE_DIR="/app/repo_clone" -e OUTPUT_DIR="/app/parquet_output" -v $(pwd)/parquet_output:/app/parquet_output sql-to-parquet
    ```
 
-Parquet files will be saved in the `parquet_output` directory.
+Parquet files will be saved in the `parquet_output` directory on your local file system.
 
 ## Running Locally
 
